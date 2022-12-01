@@ -1,0 +1,35 @@
+WEEK-1
+
+AIM: Download and Install JAVA, Associate SWD Jars and Browser drivers.
+
+ALGORITHM:
+1.	How to install JAVA
+2.	how to create and associate with SWD jars
+3.	how to select the browser drivers and make them to install.
+4.	Try to convert browser drivers into .exe format.
+
+SOURCE CODE:
+
+Download and Install
+It is recommended, before you proceed with online installation you may want to disable your Internet firewall. In some cases the default firewall settings are set to reject all automatic or online installations such as the Java online installation. If the firewall is not configured appropriately it may stall the download/install operation of Java under certain conditions. Refer to your specific Internet firewall manual for instructions on how to disable your Internet Firewall.
+•	Go to the Manual download page
+•	Click on Windows Online
+•	The File Download dialog box appears prompting you to run or save the download file
+•	To run the installer, click Run.
+•	To save the file for later installation, click Save.
+Choose the folder location and save the file to your local system.
+Tip: Save the file to a known location on your computer, for example, to your desktop.
+Double-click on the saved file to start the installation process.
+•	The installation process starts. Click the Install button to accept the license terms and to continue with the installation.
+ 
+•	Oracle has partnered with companies that offer various products. The installer may present you with option to install these programs when you install Java. After ensuring that the desired programs are selected, click the Next button to continue the installation.
+•	A few brief dialogs confirm the last steps of the installation process; click Close on the last dialog. This will complete Java installation process.
+
+
+ 
+
+Detect older versions (8u20 and later versions). Starting with Java 8 Update 20 (8u20), on Windows systems, the Java Uninstall Tool is integrated with the installer to provide an option to remove older versions of Java from the system. The change is applicable to 32 bit and 64 bit Windows platforms.
+Notifications about disabled Java and restoring prompts
+The installer notifies you if Java content is disabled in web browsers, and provides instructions for enabling it. If you previously chose to hide some of the security prompts for applets and Java Web Start applications, the installer provides an option for restoring the prompts. The installer may ask you to reboot your computer if you chose not to restart an internet browser when it prompted you to do so.
+
+ 

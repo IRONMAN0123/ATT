@@ -1,0 +1,67 @@
+WEEK-3
+
+AIM:
+ Write a code to search a specific month in the Facebook registration page (Birthday).
+
+ALGORITHM:
+1.	link up the browser drivers to set up connection between eclipse to website.
+2.	Write testcase for create an account.
+3.	Then fill each field automatically by the testcases given information.
+4.	Perform click operation to create and close the website after successfully created an account.
+
+SOURCE CODE:
+
+package CMRIT.CMRIT_Assignment;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class Facebook {
+
+	public static void main(String[] args) throws InterruptedException
+	{
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\LENOVO\\Downloads\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.facebook.com/");
+		
+		Thread.sleep(2000);
+		
+		WebElement createNewAccountButton = driver.findElement(By.xpath("(//a[normalize-space()='Create New Account'])[1]"));
+		createNewAccountButton.click();
+		Thread.sleep(5000);
+		WebElement firstName = driver.findElement(By.name("firstname"));
+		firstName.sendKeys("ashu");
+		
+		WebElement surName = driver.findElement(By.name("lastname"));
+		surName.sendKeys("kamatam");
+		
+		WebElement mobileNoOrEmailId= driver.findElement(By.name("reg_email__"));
+		mobileNoOrEmailId.sendKeys("1234567890");
+		
+		WebElement password = driver.findElement(By.name("reg_passwd__"));
+		password.sendKeys("123ashu");
+		Thread.sleep(2000);
+		Select dateDropdown = new Select(driver.findElement(By.name("birthday_day")));
+		dateDropdown.selectByValue("24");
+		Thread.sleep(2000);
+		Select monthDropdown = new Select(driver.findElement(By.name("birthday_month")));
+		monthDropdown.selectByValue("12");
+		Thread.sleep(2000);
+		Select yearDropdown = new Select(driver.findElement(By.name("birthday_year")));
+		yearDropdown.selectByValue("1996");
+		Thread.sleep(2000);
+		WebElement femaleRadioBtn = driver.findElement(By.xpath("(//label[normalize-space()='Female'])[1]"));
+		femaleRadioBtn.click();
+		Thread.sleep(2000);
+		WebElement signUpBtn = driver.findElement(By.name("websubmit"));
+		signUpBtn.click();
+		Thread.sleep(2000);
+		System.out.println("Performed click action");
+		driver.quit();
+		
+	}
+	}
